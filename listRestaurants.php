@@ -1,4 +1,6 @@
-
+<?php
+include "php/config.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,17 +15,27 @@
         
     </head>
     <body>
+        <?php
+        if (isset($_POST['restaurant-search-submit'])) {
+            $name = trim(mysqli_real_escape_string($conn, $_POST['restaurant-search-name']));
+ 
+        
+            if (empty($name)){
+                header('Location: ../search.php?search=empty');
+            } else {
+                $searchCheck = "SELECT * FROM restaurant WHERE res_name='$name'";
+                $searchQuery = mysqli_query($conn, $searchCheck);
+                if (mysqli_num_rows($loginQuery) > 0) {
+                    while ($row = mysqli_fetch_assoc($searchQuery)){
 
-        <div class="wrap">
-            <div class="search">
-                <form class = "form-search" action = "listRestaurants.php" method="post">
-                    <input type="text" name="restaurant-search-name" class="searchTerm" placeholder="What are you looking for?">
-                    <button type="submit" class="searchButton" name = "restaurant-search-submit">
-                    <i class="fa fa-search">submit</i>
-                    </button>
-                 </form>
-            </div>
-         </div>
+                        echo $row['res_name']; 
+                    }
+                } else {
+                    header('Location: ../search.php?search=none');
+                    
+                }
+            }
+        ?>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
