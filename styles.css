@@ -1,0 +1,164 @@
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?cs=srgb&dl=pexels-kaboompics-com-6267.jpg&fm=jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.title {
+    text-align: center;
+    padding: 100px;
+    background-color: whitesmoke;
+}
+
+.list-group {
+    padding: 100px;
+    margin: auto;
+}
+.loginTotal, .registerTotal {
+    text-align: center;
+    padding: 100px;
+    margin: auto;
+    text-size-adjust: auto;
+    font-size: large;
+}
+
+
+/* Search page design */
+  
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 10px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.item1 {
+    background-color: rgba(218, 221, 221, 0.555);
+}
+
+.item1:hover {
+    background-color: white;
+}
+
+.nav {
+    background-color: white;
+    
+}
+
+.nav a:hover {
+    background-color: whitesmoke;
+}
+
+.container {
+    padding: 10px;
+}
+
+.finalbtn {
+    padding: 16px;
+    width: 40%;
+    margin-top: 0;
+    margin-left: 30%;
+    margin-right: 30%;
+    cursor: pointer;
+}
+
+
+.signup-paragraph, .login-paragraph {
+    margin-bottom: 50px;
+}
+
+
+.form-signup input[type=text], .form-signup input[type=password], .form-signup input[type=email] {  
+color: rgb(0, 204, 255);
+background: whitesmoke;
+width: 38%;
+padding: 20px;
+border: none;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+margin-bottom: 20px;
+display: block;
+
+}   
+
+.form-signup input[type=text]:focus, .form-signup input[type=password]:focus, .form-signup input[type=email]:focus {
+background-color: gray;
+}
+
+.form-login input[type=password], .form-login input[type=email] {  
+    color: rgb(0, 204, 255);
+    background: whitesmoke;
+    width: 38%;
+    padding: 20px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    
+  }
+  
+  .form-login input[type=password]:focus, .form-login input[type=email]:focus {
+    background-color: gray;
+  }
+
+h2, p {
+    text-align: center
+}
+
+
+.finalbtn:hover {
+background-color: cadetblue;
+}
+
+.centre {
+  text-align: center;
+  height: 30%;
+  padding: 40px;
+}
+
+
