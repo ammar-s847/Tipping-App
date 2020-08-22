@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,14 +13,15 @@
         
     </head>
     <body>
-        <?php include 'php/nav.component.php'; ?>
 
         <div class="wrap">
             <div class="search">
-               <input type="text" class="searchTerm" placeholder="What are you looking for?">
-               <button type="submit" class="searchButton">
-                 <i class="fa fa-search"></i>
-              </button>
+                <form class = "form-search" action = "listRestaurants.php" method="post">
+                    <input type="text" name="restaurant-search-name" class="searchTerm" placeholder="What are you looking for?">
+                    <button type="submit" class="searchButton" name = "restaurant-search-submit">
+                    <i class="fa fa-search">submit</i>
+                    </button>
+                 </form>
             </div>
          </div>
 
