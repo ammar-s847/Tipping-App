@@ -5,36 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="styles.css">
 
         <title>Login</title>
 
     </head>
     <body>
-        <nav class="nav">
-            <a class="nav-link active" href="index.php">HOME</a>
-            <a class="nav-link active" href="search.php">SEARCH</a>
-            <a class="nav-link active" href="login.php">LOGIN</a>
-            <a class="nav-link active" href="register.php">REGISTER</a>
-        </nav>
+        <?php include 'php/nav.component.php'; ?>
         
-        
-        <form class="form-login" action="php/login.script.php">
+        <form class="form-login" action="php/login.script.php" method="post">
             <div class="container">
 
               <div class="list-group">
                 <a class="list-group-item active centre" style="color: white;">Login</a>
                 <a class="list-group-item list-group-item-action centre">Enter your information to login as a user/business owner</a>
-                
               </div>
           
               <input type="email" placeholder="EMAIL" name="login-email" required>
           
               <input type="password" placeholder="PASSWORD" name="login-password" required>
           
-          
-              
-              <button type="submit" name = "login-submit" class="btn btn-primary btn-lg finalbtn">Submit</button>
+              <button type="submit" name="login-submit" class="btn btn-primary btn-lg finalbtn">Submit</button>
               
             </div>
           </form>

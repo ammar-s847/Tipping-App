@@ -20,7 +20,7 @@ if (isset($_POST['login-submit'])) {
             $row = mysqli_fetch_assoc($loginQuery);
             $dehashedPassword = password_verify($password, $row['password']);
             if (!$dehashedPassword) {
-                header("Location: ../index.phplogin=password");
+                header("Location: ../index.php?login=password");
                 exit();
             } else if ($dehashedPassword) {
                 $_SESSION['cardNum'] = $row['cardNum'];

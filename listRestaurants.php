@@ -9,7 +9,7 @@ include "php/config.php";
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="styles.css">
 
         <title>Search</title>
         
@@ -21,7 +21,7 @@ include "php/config.php";
 
         
             if (empty($name)){
-                header('Location: ../search.php?search=empty');
+                header('Location: search.php?search=empty');
             } else {
                 $searchCheck = "SELECT * FROM restaurant WHERE res_name='$name'";
                 $searchQuery = mysqli_query($conn, $searchCheck);
@@ -36,7 +36,7 @@ include "php/config.php";
                             </div>';
                     }
                 } else {
-                    header('Location: ../search.php?search=none');
+                    header('Location: search.php?search=none');
                     quit();
                     
                     
